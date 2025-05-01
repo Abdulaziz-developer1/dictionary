@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.bg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+    gap: 20px;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.5em;
+    overflow: auto;
+    background-color: mediumturquoise;
+}
+
+h1{
+    font-size: 3em;
+}
+
+input{
+    width: 400px;
+    height: 50px;
+    border-radius: 15px;
+    background: transparent;
+    padding-left: 20px;
+    font-size: 2em;
+}
+
+input::placeholder{
+    font-size: 20px;
+}
+
+.new{
+    width: 400px;
+    background-color: cadetblue;
+    min-height: 40px;
+    gap: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+}
+
+.after::after{
+    content: 'salom';
+}
