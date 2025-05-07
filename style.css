@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: sans-serif;
     text-transform: uppercase;
+    transition: all .3s;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .bg{
@@ -16,40 +23,170 @@
     width: 100vw;
     height: 100vh;
     font-size: 1.5em;
-    overflow: auto;
-    background-color: mediumturquoise;
+    background-color: #ffffff;
+    overflow: hidden;
 }
 
 h1{
     font-size: 3em;
 }
 
-input{
-    width: 400px;
-    height: 50px;
+#wordList{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wordList::-webkit-scrollbar{
+    width: 10px;
+}
+
+.input{
+    width: 500px;
+    height: 70px;
     border-radius: 15px;
     background: transparent;
     padding-left: 20px;
-    font-size: 2em;
+    font-size: 1.4em;
+    border: none;
+    box-shadow: 2px 2px;
+    outline: none;
+    padding: 0px 20px 10px 20px;
 }
 
-input::placeholder{
+.input::placeholder{
     font-size: 20px;
 }
 
 .new{
     width: 400px;
-    background-color: cadetblue;
-    min-height: 40px;
+    /* background-color: #000000; */
+    box-shadow: 2px 2px ;
     gap: 5px;
+    height: auto;
     border-radius: 10px;
     padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 10px;
+    cursor: pointer;
 }
 
-.after::after{
-    content: 'salom';
+.btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7b7b7b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    height: 25vh;
+    box-shadow: 0 4px 8px;
+    z-index: 1000;
+}
+
+.modal-active{
+    display: block;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-header {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.close-btn {
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.setting{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.setting input{
+    transform: scale(1.2);
+}
+
+.setting input[type="checkbox"]{
+    transform: scale(2.5);
+}
+
+.dark{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+@media (max-width:1000px) {
+    .modal{
+        min-height: 25vh;
+        max-height: 80vh;
+    }
+
+    .input{
+        width: 90vw;
+    }
+
+    .modal-header h2{
+        font-size: 1.1em;
+    }
+
+    .new{
+        width: 80%;
+    }
+
+    .bg h1{
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 500px) {
+    #wordList{
+        width: 90vw;
+    }
+
+    .modal-header h2{
+        font-size: .9em;
+    }
 }
