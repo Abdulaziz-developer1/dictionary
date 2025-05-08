@@ -8,9 +8,7 @@ let words1 = [
   { word: "hope", translation: "umid" },
   { word: "hurry", translation: "shoshilish" },
   { word: "hard", translation: "qiyin" },
-  { word: "happy", translation: "baxtli" },
   { word: "habit", translation: "odat" },
-  { word: "history", translation: "tarix" },
   { word: "high", translation: "baland" },
   { word: "hold", translation: "ushlamoq" },
   { word: "home", translation: "uy" },
@@ -18,15 +16,8 @@ let words1 = [
   { word: "alone", translation: "yolg'iz" },
   { word: "again", translation: "yana" },
   { word: "add", translation: "qo'shmoq" },
-  { word: "friend", translation: "do'st" },
-  { word: "family", translation: "oila" },
   { word: "food", translation: "ovqat" },
-  { word: "water", translation: "suv" },
   { word: "school", translation: "maktab" },
-  { word: "teacher", translation: "o'qituvchi" },
-  { word: "student", translation: "talaba" },
-  { word: "book", translation: "kitob" },
-  { word: "pen", translation: "ruchka" },
   { word: "computer", translation: "kompyuter" },
   { word: "phone", translation: "telefon" },
   { word: "music", translation: "musiqa" },
@@ -36,7 +27,6 @@ let words1 = [
   { word: "love", translation: "sevgi" },
   { word: "peace", translation: "tinchlik" },
   { word: "dream", translation: "tush" },
-  { word: "work", translation: "ish" },
   { word: "play", translation: "o'ynash" },
   { word: "run", translation: "yugurmoq" },
   { word: "walk", translation: "yurmoq" },
@@ -59,8 +49,6 @@ let words1 = [
   { word: "slow", translation: "sekin" },
   { word: "bright", translation: "yorqin" },
   { word: "dark", translation: "qorong'i" },
-  { word: "cold", translation: "sovuq" },
-  { word: "hot", translation: "issiq" },
   { word: "young", translation: "yosh" },
   { word: "old", translation: "qari" },
   { word: "beautiful", translation: "chiroyli" },
@@ -85,8 +73,6 @@ let words1 = [
   { word: "wide", translation: "keng" },
   { word: "narrow", translation: "tor" },
   { word: "soft", translation: "yumshoq" },
-  { word: "hard", translation: "qattiq" },
-  { word: "light", translation: "yorug'" },
   { word: "heavy", translation: "og'ir" },
   { word: "one", translation: "bir" },
   { word: "two", translation: "ikki" },
@@ -116,12 +102,10 @@ let words1 = [
   { word: "cat", translation: "mushuk" },
   { word: "dog", translation: "kuchuk" },
   { word: "bird", translation: "qush" },
-  { word: "fish", translation: "baliq" },
   { word: "cow", translation: "sigir" },
   { word: "horse", translation: "ot" },
   { word: "sheep", translation: "qo'y" },
   { word: "goat", translation: "echki" },
-  { word: "chicken", translation: "tovuq" },
   { word: "duck", translation: "o'rdak" },
   { word: "pig", translation: "cho'chqa" },
   { word: "rabbit", translation: "quyon" },
@@ -162,10 +146,6 @@ let words1 = [
   { word: "road", translation: "yo'l" },
   { word: "bridge", translation: "ko'prik" },
   { word: "building", translation: "bino" },
-  { word: "shop", translation: "do'kon" },
-  { word: "market", translation: "bozor" },
-  { word: "hospital", translation: "kasalxona" },
-  { word: "police", translation: "politsiya" },
   { word: "station", translation: "stantsiya" },
   { word: "airport", translation: "aeroport" },
   { word: "hotel", translation: "mehmonxona" },
@@ -185,7 +165,6 @@ let words1 = [
   { word: "office", translation: "ofis" },
   { word: "factory", translation: "zavod" },
   { word: "farm", translation: "ferma" },
-  { word: "house", translation: "uy" },
   { word: "apartment", translation: "kvartira" },
   { word: "room", translation: "xona" },
   { word: "kitchen", translation: "oshxona" },
@@ -207,7 +186,6 @@ let words1 = [
   { word: "shelf", translation: "reja" },
   { word: "mirror", translation: "oyna" },
   { word: "lamp", translation: "chiroq" },
-  { word: "clock", translation: "soat" },
   { word: "picture", translation: "rasm" },
   { word: "carpet", translation: "gilam" },
   { word: "blanket", translation: "yopinchiq" },
@@ -237,11 +215,8 @@ let words1 = [
   { word: "ring", translation: "uzuk" },
   { word: "necklace", translation: "munchoq" },
   { word: "earrings", translation: "zirak" },
-  { word: "watch", translation: "soat" },
   { word: "glasses", translation: "ko'zoynak" },
   { word: "umbrella", translation: "soyabon" },
-  { word: "newspaper", translation: "gazeta" },
-  { word: "magazine", translation: "jurnal" },
   { word: "book", translation: "kitob" },
   { word: "notebook", translation: "daftar" },
   { word: "pen", translation: "ruchka" },
@@ -257,7 +232,6 @@ let words1 = [
   { word: "box", translation: "quti" },
   { word: "bottle", translation: "shisha" },
   { word: "cup", translation: "fincan" },
-  { word: "glass", translation: "stakan" },
   { word: "plate", translation: "likopcha" },
   { word: "bowl", translation: "kosa" },
   { word: "fork", translation: "vilka" },
@@ -279,10 +253,8 @@ let words1 = [
   { word: "light", translation: "yorug'lik" },
   { word: "bulb", translation: "lampa" },
   { word: "battery", translation: "batareya" },
-  { word: "computer", translation: "kompyuter" },
   { word: "laptop", translation: "noutbuk" },
   { word: "tablet", translation: "planshet" },
-  { word: "phone", translation: "telefon" },
   { word: "television", translation: "televizor" },
   { word: "radio", translation: "radio" },
   { word: "camera", translation: "kamera" },
@@ -298,7 +270,6 @@ let words1 = [
   { word: "taxi", translation: "taksi" },
   { word: "motorcycle", translation: "mototsikl" },
   { word: "truck", translation: "yuk mashinasi" },
-  { word: "ambulance", translation: "tez yordam" },
   { word: "police car", translation: "militsiya mashinasi" },
   { word: "fire truck", translation: "o't o'chirish mashinasi" },
   { word: "wheel", translation: "g'ildirak" },
@@ -326,7 +297,6 @@ let words1 = [
   { word: "cotton", translation: "paxta" },
   { word: "wool", translation: "jun" },
   { word: "silk", translation: "ipak" },
-  { word: "button", translation: "tugma" },
   { word: "zipper", translation: "zanjir" },
   { word: "needle", translation: "igna" },
   { word: "thread", translation: "ip" },
@@ -468,7 +438,6 @@ let words1 = [
   { word: "prayer", translation: "ibodat" },
   { word: "belief", translation: "e'tiqod" },
   { word: "faith", translation: "imon" },
-  { word: "hope", translation: "umid" },
   { word: "charity", translation: "xayriya" },
   { word: "volunteer", translation: "ko'ngilli" },
   { word: "community", translation: "jamiyat" },
@@ -488,7 +457,6 @@ let words1 = [
   { word: "protest", translation: "norozilik" },
   { word: "strike", translation: "ish tashlash" },
   { word: "war", translation: "urush" },
-  { word: "peace", translation: "tinchlik" },
   { word: "army", translation: "armiya" },
   { word: "soldier", translation: "askar" },
   { word: "officer", translation: "ofitser" },
@@ -505,7 +473,6 @@ let words1 = [
   { word: "police", translation: "politsiya" },
   { word: "judge", translation: "sudya" },
   { word: "court", translation: "sud" },
-  { word: "lawyer", translation: "advokat" },
   { word: "witness", translation: "guvoh" },
   { word: "crime", translation: "jinoyat" },
   { word: "murder", translation: "qotillik" },
@@ -515,7 +482,6 @@ let words1 = [
   { word: "violence", translation: "zo'ravonlik" },
   { word: "punishment", translation: "jazo" },
   { word: "fine", translation: "jarima" },
-  { word: "death", translation: "o'lim" },
   { word: "life", translation: "hayot" },
   { word: "health", translation: "salomatlik" },
   { word: "illness", translation: "kasallik" },
@@ -525,13 +491,11 @@ let words1 = [
   { word: "headache", translation: "bosh og'rig'i" },
   { word: "stomachache", translation: "qorin og'rig'i" },
   { word: "cough", translation: "yo'tal" },
-  { word: "cold", translation: "so'qol" },
   { word: "flu", translation: "gripp" },
   { word: "allergy", translation: "allergiya" },
   { word: "medicine", translation: "dori" },
   { word: "pill", translation: "tabletka" },
   { word: "vaccine", translation: "vaksina" },
-  { word: "doctor", translation: "shifokor" },
   { word: "nurse", translation: "hamshira" },
   { word: "hospital", translation: "kasalxona" },
   { word: "clinic", translation: "klinika" },
@@ -593,8 +557,7 @@ let words1 = [
   { word: "pilot", translation: "uchuvchi" },
   { word: "captain", translation: "kapitan" },
   { word: "sailor", translation: "dengizchi" },
-  { word: "soldier", translation: "askar" },
-  { word: "police", translation: "politsiyachi" },
+  { word: "police officer", translation: "politsiyachi" },
   { word: "firefighter", translation: "o't o'chiruvchi" },
   { word: "builder", translation: "quruvchi" },
   { word: "carpenter", translation: "duradgor" },
@@ -759,7 +722,6 @@ let words1 = [
   { word: "garlic", translation: "sarimsoq" },
   { word: "carrot", translation: "sabzi" },
   { word: "cabbage", translation: "karam" },
-  { word: "pepper", translation: "qalampir" },
   { word: "mushroom", translation: "qo'ziqorin" },
   { word: "corn", translation: "makkajo'xori" },
   { word: "pea", translation: "noxat" },
@@ -832,6 +794,35 @@ let words1 = [
   { word: "toast", translation: "tost" },
   { word: "cereal", translation: "suxoy zavtrak" },
   { word: "muesli", translation: "myusli" },
-  { word: "popcorn", translation: "popkorn" }
+  { word: "popcorn", translation: "popkorn" },
 ];
 
+
+function findDuplicateWords(wordsArray) {
+  let wordCount = {};
+  let duplicates = [];
+
+  // Count occurrences of each word
+  wordsArray.forEach((item) => {
+    if (wordCount[item.word]) {
+      wordCount[item.word]++;
+    } else {
+      wordCount[item.word] = 1;
+    }
+  });
+
+  // Find words that appear more than once
+  for (let word in wordCount) {
+    if (wordCount[word] > 1) {
+      duplicates.push(word);
+    }
+  }
+
+  return duplicates;
+}
+
+// Example usagea
+let duplicates = findDuplicateWords(words1);
+if(duplicates.length != 0){
+  console.log("Duplicate words:", duplicates);
+}
