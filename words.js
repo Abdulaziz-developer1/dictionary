@@ -824,5 +824,5 @@ function findDuplicateWords(wordsArray) {
 // Example usagea
 let duplicates = findDuplicateWords(words1);
 if(duplicates.length != 0){
-  console.log("Duplicate words:", duplicates);
+  console.error("Duplicate words:", duplicates);
 }
