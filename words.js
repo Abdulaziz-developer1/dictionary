@@ -795,6 +795,7 @@ let words1 = [
   { word: "cereal", translation: "suxoy zavtrak" },
   { word: "muesli", translation: "myusli" },
   { word: "popcorn", translation: "popkorn" },
+  { word: "word", translation: "so'z" },
 ];
 
 

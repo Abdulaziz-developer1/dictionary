@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="logo.avif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -17,7 +20,10 @@
         <div id="wordList"></div>
     </div>
 
-    <button class="btn" id="btn"><i class='bx bx-cog'></i></button>
+    <div class="btns">
+        <button class="btn" id="btn"><i class='bx bx-cog'></i></button>
+        <button class="btn btn1" id="btn1"><i class="fa-solid fa-bookmark"></i></button>
+    </div>
 
     <div class="modal" id="modal">
         <div class="modal-content">
@@ -32,6 +38,10 @@
             </div>
 
         </div>
+    </div>
+    <div class="saved" id="saved">
+        <h3>Saqlangan so'zlar</h3>
+        <ul id="savedList"></ul>
     </div>
 
     <script src="words.js"></script>

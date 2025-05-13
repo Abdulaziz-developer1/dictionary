@@ -1,192 +1,246 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    transition: all .3s;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  list-style: none;
+  text-decoration: none;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.bg{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5%;
-    gap: 20px;
-    text-align: center;
-    width: 100vw;
-    height: 100vh;
-    font-size: 1.5em;
-    background-color: #ffffff;
-    overflow: hidden;
+.bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+  gap: 20px;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.5em;
+  background-color: #ffffff;
+  overflow: hidden;
 }
 
-h1{
-    font-size: 3em;
+h1 {
+  font-size: 3em;
 }
 
-#wordList{
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 430px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#wordList {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#wordList::-webkit-scrollbar{
-    width: 10px;
+#wordList::-webkit-scrollbar {
+  width: 10px;
 }
 
-.input{
-    width: 500px;
-    height: 70px;
-    border-radius: 15px;
-    background: transparent;
-    padding-left: 20px;
-    font-size: 1.4em;
-    border: none;
-    box-shadow: 2px 2px;
-    outline: none;
-    padding: 0px 20px 10px 20px;
+.input {
+  width: 500px;
+  height: 70px;
+  border-radius: 15px;
+  background: transparent;
+  padding-left: 20px;
+  font-size: 1.4em;
+  border: none;
+  box-shadow: 2px 2px;
+  outline: none;
+  padding: 0px 20px 10px 20px;
 }
 
-.input::placeholder{
-    font-size: 20px;
+.input::placeholder {
+  font-size: 20px;
 }
 
-.new{
-    width: 400px;
-    /* background-color: #000000; */
-    box-shadow: 2px 2px ;
-    gap: 5px;
-    height: auto;
-    border-radius: 10px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10px;
-    cursor: pointer;
+.new {
+  width: 400px;
+  /* background-color: #000000; */
+  box-shadow: 2px 2px;
+  gap: 5px;
+  height: auto;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  cursor: pointer;
 }
 
-.btn{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 2em;
+.btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:active {
+  margin-top: -10px;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #7b7b7b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 60%;
-    height: 25vh;
-    box-shadow: 0 4px 8px;
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #7b7b7b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  height: 25vh;
+  box-shadow: 0 4px 8px;
+  z-index: 1000;
 }
 
-.modal-active{
-    display: block;
+.modal-active {
+  display: block;
 }
 
 .modal-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .modal-header {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
 }
 
 .modal-body {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .modal-footer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .close-btn {
-    background-color: #f44336; /* Red */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #f44336; /* Red */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.setting{
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    justify-content: space-between;
+.setting {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.setting input{
-    transform: scale(1.2);
+.setting input {
+  transform: scale(1.2);
 }
 
-.setting input[type="checkbox"]{
-    transform: scale(2.5);
+.setting input[type="checkbox"] {
+  transform: scale(2.5);
 }
 
-.dark{
-    background-color: #000 !important;
-    color: #fff !important;
+.dark {
+  background-color: #000 !important;
+  color: #fff !important;
 }
 
-@media (max-width:1000px) {
-    .modal{
-        min-height: 25vh;
-        max-height: 80vh;
-    }
+.btn1 {
+  top: 80px;
+  font-size: 25px;
+  /* right: 26px; */
+}
 
-    .input{
-        width: 90vw;
-    }
+.saved {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  gap: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #7b7b7b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  min-height: 25vh;
+  height: auto;
+  box-shadow: 0 4px 8px;
+  z-index: 1000;
+  max-height: 90vh;
+}
 
-    .modal-header h2{
-        font-size: 1.1em;
-    }
+#saved {
+  overflow: auto;
+}
 
-    .new{
-        width: 80%;
-    }
+.saved-active {
+  display: flex;
+  flex-direction: column;
+}
 
-    .bg h1{
-        font-size: 1.3em;
-    }
+.saved-word {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+@media (max-width: 1000px) {
+  .modal {
+    min-height: 25vh;
+    max-height: 80vh;
+  }
+
+  .input {
+    width: 90vw;
+  }
+
+  .modal-header h2 {
+    font-size: 1.1em;
+  }
+
+  .new {
+    width: 80%;
+  }
+
+  .bg h1 {
+    font-size: 1.3em;
+  }
 }
 
 @media (max-width: 500px) {
-    #wordList{
-        width: 90vw;
-    }
+  #wordList {
+    width: 90vw;
+  }
 
-    .modal-header h2{
-        font-size: .9em;
-    }
+  .modal-header h2 {
+    font-size: 0.9em;
+  }
 }

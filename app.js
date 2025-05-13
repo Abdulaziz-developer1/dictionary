@@ -17,11 +17,46 @@ if (inp.value === "") {
 
     newListItem.appendChild(translation);
 
+    const add = document.createElement("button");
+    add.innerText = "Add";
+    add.style.display = "none";
+    add.style.fontSize = "0.7em";
+    add.style.color = "#007bff";
+    add.style.marginLeft = "10px";
+    add.style.cursor = "pointer";
+    add.style.border = "none";
+    add.style.backgroundColor = "transparent";
+    add.classList.add("add-btn");
+
+    // Append the button
+    newListItem.appendChild(add);
+
+    const savedWords = JSON.parse(localStorage.getItem("savedWords") || "[]");
+    add.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent parent <li> click
+
+      // Check if the word is already saved
+      const exists = savedWords.find((w) => w.word === element.word);
+
+      if (!exists) {
+        savedWords.push({
+          word: element.word,
+          translation: element.translation,
+        });
+        localStorage.setItem("savedWords", JSON.stringify(savedWords));
+        alert(`✅ "${element.word}" added to your saved list!`);
+      } else {
+        alert(`⚠️ "${element.word}" is already in your saved list.`);
+      }
+    });
+
     newListItem.addEventListener("click", () => {
       if (translation.style.display === "none") {
         translation.style.display = "block";
+        add.style.display = "block";
       } else {
         translation.style.display = "none";
+        add.style.display = "none";
       }
     });
 
@@ -89,6 +124,8 @@ checkbox.addEventListener("change", () => {
     document.querySelector(".bg").classList.remove("dark");
     localStorage.setItem("dark", "false");
   }
+reloadOnSettingsChange();
+
 });
 
 if (localStorage.getItem("dark") === "true") {
@@ -99,7 +136,6 @@ if (localStorage.getItem("dark") === "true") {
   inp.style.color = "#000";
 }
 
-
 // Apply settings immediately on page load
 document.addEventListener("DOMContentLoaded", () => {
   // Apply dark mode setting
@@ -107,26 +143,26 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".bg").classList.add("dark");
     checkbox.checked = true; // Ensure the checkbox reflects the current state
     btn.style.color = "#fff";
+    btn1.style.color = "#fff";
   } else {
     document.querySelector(".bg").classList.remove("dark");
     checkbox.checked = false;
     btn.style.color = "#000";
+    btn1.style.color = "#000";
   }
+reloadOnSettingsChange();
 
 });
 
 // Update the reloadOnSettingsChange function
 function reloadOnSettingsChange() {
-  const settingsInputs = document.querySelectorAll("#dark, #font");
+  const settingsInputs = document.querySelectorAll("#dark");
 
   settingsInputs.forEach((input) => {
     input.addEventListener("change", () => {
       if (input.id === "dark") {
         // Save dark mode state
         localStorage.setItem("dark", input.checked ? "true" : "false");
-      } else if (input.id === "font") {
-        // Save font size
-        localStorage.setItem("font", input.value);
       }
       location.reload(); // Reload the page after saving changes
     });
@@ -134,7 +170,39 @@ function reloadOnSettingsChange() {
 }
 
 // Call the function to enable reloading on settings change
-reloadOnSettingsChange();
-
 
 console.log(`${words.length}ta so'z mavjud!`);
+
+let saved = document.getElementById("saved");
+let savedList = document.getElementById("savedList");
+let btn1 = document.querySelector("#btn1");
+
+let savedWords = JSON.parse(localStorage.getItem("savedWords") || "[]");
+
+savedWords.forEach((element) => {
+  let item = document.createElement("li");
+
+  let newItem = document.createElement("p");
+  newItem.innerText = element.word;
+  item.appendChild(newItem);
+
+  let newItem2 = document.createElement("p");
+  newItem2.innerText = element.translation;
+  item.appendChild(newItem2);
+  
+  item.classList.add("saved-word");
+  savedList.appendChild(item);
+reloadOnSettingsChange();
+
+});
+
+
+btn1.addEventListener("click", function () {
+  saved.classList.toggle("saved-active");
+reloadOnSettingsChange();
+});
+
+
+reloadOnSettingsChange();
+
+console.log(`${savedWords.length}ta saqlangan so'z mavjud!`);
