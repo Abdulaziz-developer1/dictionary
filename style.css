@@ -96,7 +96,7 @@ h1 {
 }
 
 .btn:active {
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .modal {
@@ -210,6 +210,10 @@ h1 {
   justify-content: space-between;
   margin-top: 10px;
   gap: 20px;
+}
+
+.line{
+  text-decoration: line-through;
 }
 
 @media (max-width: 1000px) {

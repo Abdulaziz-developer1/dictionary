@@ -18,7 +18,7 @@ if (inp.value === "") {
     newListItem.appendChild(translation);
 
     const add = document.createElement("button");
-    add.innerText = "Add";
+    add.innerHTML = `<i class="fa-solid fa-bookmark"></i>`;
     add.style.display = "none";
     add.style.fontSize = "0.7em";
     add.style.color = "#007bff";
@@ -124,8 +124,7 @@ checkbox.addEventListener("change", () => {
     document.querySelector(".bg").classList.remove("dark");
     localStorage.setItem("dark", "false");
   }
-reloadOnSettingsChange();
-
+  reloadOnSettingsChange();
 });
 
 if (localStorage.getItem("dark") === "true") {
@@ -150,8 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.style.color = "#000";
     btn1.style.color = "#000";
   }
-reloadOnSettingsChange();
-
+  reloadOnSettingsChange();
 });
 
 // Update the reloadOnSettingsChange function
@@ -171,8 +169,8 @@ function reloadOnSettingsChange() {
 
 // Call the function to enable reloading on settings change
 
-console.log(`${words.length}ta so'z mavjud!`);
-
+console.log(`There are ${words.length} words!`);
+let clearCount = 0;
 let saved = document.getElementById("saved");
 let savedList = document.getElementById("savedList");
 let btn1 = document.querySelector("#btn1");
@@ -189,20 +187,37 @@ savedWords.forEach((element) => {
   let newItem2 = document.createElement("p");
   newItem2.innerText = element.translation;
   item.appendChild(newItem2);
-  
+
   item.classList.add("saved-word");
   savedList.appendChild(item);
-reloadOnSettingsChange();
+  reloadOnSettingsChange();
 
+  item.addEventListener("click", function () {
+    item.classList.toggle("line");
+    clearCount++;
+    if (clearCount > 5) {
+      let submit = confirm(
+        `You have too many words selected, so would you like to delete them.`
+      );
+      if (submit == true) {
+        clearCount = 0;
+        
+        if (item.classList.includes("line")) {
+          savedWords = savedWords.filter((e) => e != item);
+          console.log('hello');
+          
+        }
+      }
+    }
+  });
 });
-
 
 btn1.addEventListener("click", function () {
   saved.classList.toggle("saved-active");
-reloadOnSettingsChange();
+  reloadOnSettingsChange();
 });
 
-
 reloadOnSettingsChange();
 
-console.log(`${savedWords.length}ta saqlangan so'z mavjud!`);
+console.log(`There are ${savedWords.length} words saved!`);
+
