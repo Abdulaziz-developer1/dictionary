@@ -792,11 +792,14 @@ let words1 = [
   { word: "croissant", translation: "kruassan" },
   { word: "baguette", translation: "baget" },
   { word: "toast", translation: "tost" },
-  { word: "cereal", translation: "suxoy zavtrak" },
+  { word: "cereal", translation: "suli yorma" },
   { word: "muesli", translation: "myusli" },
   { word: "popcorn", translation: "popkorn" },
   { word: "word", translation: "so'z" },
-];
+  {word: "beach", translation: "sohil"},
+  {word: "else", translation: "boshqa"},
+  {word: "neat", translation: "tartibli"},
+]
 
 
 function findDuplicateWords(wordsArray) {

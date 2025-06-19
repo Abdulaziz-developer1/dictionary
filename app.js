@@ -195,20 +195,6 @@ savedWords.forEach((element) => {
   item.addEventListener("click", function () {
     item.classList.toggle("line");
     clearCount++;
-    if (clearCount > 5) {
-      let submit = confirm(
-        `You have too many words selected, so would you like to delete them.`
-      );
-      if (submit == true) {
-        clearCount = 0;
-        
-        if (item.classList.includes("line")) {
-          savedWords = savedWords.filter((e) => e != item);
-          console.log('hello');
-          
-        }
-      }
-    }
   });
 });
 
